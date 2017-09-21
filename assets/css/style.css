@@ -86,6 +86,10 @@ body {
 	height: 50vh;
 }
 
+/*.answers:hover {
+	background: #eee;
+}*/
+
 .boxStyleBorder {
 	background: #fff;
 	border-bottom: 2px solid #999;
