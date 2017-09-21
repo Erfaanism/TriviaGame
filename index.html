@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>U.S. Citizenship Civic Test</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/gif" href="assets/images/icon.gif">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/javascript/lib.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+<body>
+	<div class="container-fluid" id="containerIntro">
+		<div class="row align-items-center boxStyleBorder height25">
+			<div class="col text-center">
+				<span>U.S. Citizenship Civic Test</span>
+			</div>
+		</div>
+		<div class="row align-items-center boxStyleNoBorder height50">
+			<div class="col text-center">
+				<div id="start">
+					<span>Start</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="containerQuestions">
+		<div class="row align-items-center boxStyleBorder height10">
+			<div class="col-4 text-center">
+				<span id="questionStat">Question 1 of 20</span>
+			</div>
+			<div class="col-4 text-center">
+				<i class="fa fa-clock-o fa-lg"></i>
+				<span id="timer">30 Seconds</span>
+			</div>
+			<div class="col-2" id="correctSection">
+				<i class="fa fa-check-circle"></i>
+				<span id="correctCounter">0</span>
+			</div>
+			<div class="col-2" id="incorrectSection">
+				<i class="fa fa-times-circle"></i>
+				<span id="incorrectCounter">0</span>
+			</div>			
+		</div>
+		
+		<div class="row align-items-center boxStyleBorder height17">
+			<div class="col-1 text-center">
+				<span id="questionNum">1.</span>
+			</div>
+			<div class="col-11">
+				<span id="questionText"> The Pacific Ocean is on the West Coast of the United States. The Pacific Ocean is the largest ocean in the world. It reaches from the West Coast of the United States to Asia and Australia. The states of Alaska, Washington, Oregon, California, and Hawaii border the Pacific Ocean.
+</span>
+			</div>
+
+		</div>
+		
+		<div class="row align-items-center boxStyleBorder height12">
+			<div class="col-1 text-center">
+				<span class="answerLetter">A</span>
+			</div>
+			<div class="col-11">
+				<span id="answer1">Pacific Ocean</span>
+			</div>
+		</div>
+		
+		<div class="row align-items-center boxStyleBorder height12">
+			<div class="col-1 text-center">
+				<span class="answerLetter">B</span>
+			</div>
+			<div class="col-11">
+				<span id="answer2">Atlantic Ocean</span>
+			</div>
+		</div>
+		
+		<div class="row align-items-center boxStyleBorder height12">
+			<div class="col-1 text-center">
+				<span class="answerLetter">C</span>
+			</div>
+			<div class="col-11">
+				<span id="answer3">Indian Ocean</span>
+			</div>
+		</div>
+		
+		<div class="row align-items-center boxStyleNoBorder height12">
+			<div class="col-1 text-center">
+				<span class="answerLetter">D</span>
+			</div>
+			<div class="col-11">
+				<span  id="answer4">Arctic Ocean</span>
+			</div>
+		</div>
+	</div>
+		
+		
+
+	</div>
+</body>
+</html>

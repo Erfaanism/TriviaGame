@@ -1,0 +1,96 @@
+body {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../images/flag.svg);
+	background-position: center;
+	background-attachment: fixed;
+	font-family: "Palatino",sans-serif;
+	line-height: 100%;
+}
+
+#containerIntro {
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.5);
+	position: absolute;
+	left: 12.5vw;
+	top: 12.5vh;
+	width: 75vw;
+	height: 75vh;
+	font-size: 5vh;
+}
+
+#start {
+	cursor: pointer;
+	position: absolute;
+	left: 22.5vw;
+	width: 30vw;
+	height: 10vh;
+	line-height: 10vh;
+	color: #fff;
+	background-color: #EC2427;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.5);
+}
+
+#start:hover {
+	background-color: #1A4A9C;
+	transition: all 0.5s;
+}
+
+#start:active {
+	background-color: #EC2427;
+	transition: all 0.8s;
+	opacity: 0
+}
+
+#start:active {
+	opacity: 1;
+	transition: 0s;
+}
+
+#containerQuestions {
+	display: none;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.5);
+	position: absolute;
+	left: 12.5vw;
+	top: 12.5vh;
+	width: 75vw;
+	height: 75vh;
+	line-height: 100%;
+	font-size: 3vh;	
+}
+
+#correctSection {
+	color: #457500;
+}
+
+#incorrectSection {
+	color: #CC3333;
+}
+
+.height10 {
+	height: 10vh;
+}
+
+.height12 {
+	height: 12vh;
+}
+
+.height17 {
+	height: 17vh;
+}
+
+.height25 {
+	height: 25vh;
+}
+
+.height50 {
+	height: 50vh;
+}
+
+.boxStyleBorder {
+	background: #fff;
+	border-bottom: 2px solid #999;
+}
+
+.boxStyleNoBorder {
+	background: #fff;
+}
