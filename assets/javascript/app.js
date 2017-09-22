@@ -33,6 +33,7 @@ function questionLoader(){
 	},1000);
 	$("#questionStat").text("Question " + intQuestionCounter + " of 20");
 	intQuestionNumber = Math.floor(Math.random() * _.size(objTriviaQuestions));
+	$("#questionNum").text(intQuestionNumber.toString() + ".")
 	strQuestion = objTriviaQuestions[intQuestionNumber].question;
 	$("#questionText").text(strQuestion);
 	intAnswerNumber = Math.floor(Math.random() * objTriviaQuestions[intQuestionNumber].answers.length);
@@ -75,6 +76,9 @@ function correct(position) {
 		$(".answers").css("background", "#fff", "color", "#000");
 		questionLoader();
 		bolAnswerSelected = false;
+		if (intQuestionCounter === 20) {
+			gameOver();
+		}
 	}, 4000)
 }
 
@@ -90,6 +94,9 @@ function incorrect(position) {
 		questionLoader();
 		$(".answers").css("background", "#fff", "color", "#000");
 		bolAnswerSelected = false;
+		if (intQuestionCounter === 20) {
+			gameOver();
+		}
 	}, 4000)
 }
 
@@ -102,7 +109,18 @@ function timeUp() {
 		questionLoader();
 		$(".answers").css("background", "#fff", "color", "#000");
 		bolAnswerSelected = false;
+		if (intQuestionCounter === 20) {
+			gameOver();
+		}
 	}, 4000)
+}
+
+function gameOver() {
+	$("#anthem").get(0).pause();
+	$("#containerQuestions").css("display", "none");
+	$("#containerResult").css("display", "block");
+	$("#correctResult").append(intCorrect);
+	$("#incorrectResult").append(intIncorrect);
 }
 	
 	$(".answers").hover(function () {if (!bolAnswerSelected) {
@@ -113,12 +131,17 @@ function timeUp() {
 		}}
 	)
 	$("#start").click(function() {
+		$("#anthem").get(0).play();
 		$("#containerIntro").css("display", "none");
 		$("#containerQuestions").css("display", "block");
 		objTriviaQuestions = objQuestions;
 		console.log(objTriviaQuestions);
 		console.log(_.size(objTriviaQuestions));
 		questionLoader();
+	});
+
+	$("#startOver").click(function() {
+		location.reload(true);
 	});
 
 	$(".answers").click(function() {

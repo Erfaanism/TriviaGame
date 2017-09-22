@@ -6,6 +6,10 @@ body {
 	background-attachment: fixed;
 	font-family: "Palatino",sans-serif;
 	line-height: 100%;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #containerIntro {
@@ -30,20 +34,45 @@ body {
 	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.5);
 }
 
-#start:hover {
+#startOver {
+	cursor: pointer;
+	position: absolute;
+	left: 22.5vw;
+	bottom: -4.375vh;
+	width: 30vw;
+	height: 10vh;
+	line-height: 10vh;
+	color: #fff;
+	background-color: #EC2427;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.5);
+}
+
+#start:hover, #startOver:hover {
 	background-color: #1A4A9C;
 	transition: all 0.5s;
 }
 
-#start:active {
+#start:active, #startOver:active {
 	background-color: #EC2427;
 	transition: all 0.8s;
-	opacity: 0
+	opacity: 0;
 }
 
-#start:active {
+#start:active, #startOver:active {
 	opacity: 1;
 	transition: 0s;
+}
+
+#containerResult {
+	display: none;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.5);
+	position: absolute;
+	left: 12.5vw;
+	top: 12.5vh;
+	width: 75vw;
+	height: 75vh;
+	line-height: 100%;
+	font-size: 3vh;
 }
 
 #containerQuestions {
@@ -78,6 +107,10 @@ body {
 	height: 17vh;
 }
 
+.height18 {
+	height: 18.75vh;
+}
+
 .height25 {
 	height: 25vh;
 }
@@ -86,9 +119,9 @@ body {
 	height: 50vh;
 }
 
-/*.answers:hover {
-	background: #eee;
-}*/
+.answers:hover {
+	cursor: pointer;
+}
 
 .boxStyleBorder {
 	background: #fff;

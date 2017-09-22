@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
 <body>
+	<audio id="anthem" src="assets/audio/anthem.mp3" loop="true"></audio>
 	<div class="container-fluid" id="containerIntro">
 		<div class="row align-items-center boxStyleBorder height25">
 			<div class="col text-center">
@@ -94,7 +95,30 @@
 			</div>
 		</div>
 	</div>
-		
+	<div class="container-fluid" id="containerResult">
+		<div class="row align-items-center boxStyleBorder height18">
+			<div class="col text-center">
+				<span>U.S. Citizenship Civic Test</span>
+			</div>
+		</div>
+		<div class="row align-items-center boxStyleBorder height18">
+			<div class="col text-center">
+				<span id="correctResult">Number of Correct Answer: </span>
+			</div>
+		</div>
+		<div class="row align-items-center boxStyleBorder height18">
+			<div class="col text-center">
+				<span id="incorrectResult">Number of Incorrect Answer: </span>
+			</div>
+		</div>
+		<div class="row align-items-center boxStyleNoBorder height18">
+			<div class="col text-center">
+				<div id="startOver">
+					<span>Start Over</span>
+				</div>
+			</div>
+		</div>
+	</div>
 		
 
 	</div>

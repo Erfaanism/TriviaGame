@@ -575,12 +575,9 @@ var objQuestions = {
    "49": {
       "question": "What are two rights of everyone living in the United States?",
       "answers": [
-         "freedom of expression",
-         "freedom of speech",
-         "freedom of assembly",
-         "freedom to petition the government",
-         "freedom of religion",
-         "the right to bear arms"
+         "freedom of expression and freedom of speech",
+         "freedom of assembly and freedom to petition the government",
+         "freedom of religion and the right to bear arms"
       ],
       "wrong": [
          "freedom of religion and freedom to make treaties with other countries",
