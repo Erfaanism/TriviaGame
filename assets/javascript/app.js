@@ -32,22 +32,16 @@ function questionLoader(){
 		}
 	},1000);
 	$("#questionStat").text("Question " + intQuestionCounter + " of 20");
-	intQuestionNumber = Math.floor(Math.random() * _.size(objTriviaQuestions));
+	intQuestionNumber = Math.floor(Math.random() * _.size(objTriviaQuestions)) - 1;
 	$("#questionNum").text(intQuestionNumber.toString() + ".")
 	strQuestion = objTriviaQuestions[intQuestionNumber].question;
 	$("#questionText").text(strQuestion);
 	intAnswerNumber = Math.floor(Math.random() * objTriviaQuestions[intQuestionNumber].answers.length);
-	console.log("Answers.length: " + objTriviaQuestions[intQuestionNumber].answers.length);
 	strAnswer = objTriviaQuestions[intQuestionNumber].answers[intAnswerNumber];
-	console.log("strAnswer: " + strAnswer);
 	intRandom = Math.floor(Math.random() * arrChoices.length);
-	console.log("intRandom answer: " + intRandom);
 	strRandom = (intRandom + 1).toString();
 	$("#answer" + strRandom).text(strAnswer);
-	console.log("arrLength" + arrChoices.length);
 	arrChoices.splice(intRandom, 1);
-	console.log(arrChoices);
-	console.log("arrLength" + arrChoices.length);
 	$.each(arrChoices, function(i, val){
 		$("#answer" + val.toString()).text(objTriviaQuestions[intQuestionNumber].wrong[i]);
 	});
@@ -76,7 +70,7 @@ function correct(position) {
 		$(".answers").css("background", "#fff", "color", "#000");
 		questionLoader();
 		bolAnswerSelected = false;
-		if (intQuestionCounter === 20) {
+		if (intQuestionCounter > 20) {
 			gameOver();
 		}
 	}, 4000)
@@ -94,7 +88,7 @@ function incorrect(position) {
 		questionLoader();
 		$(".answers").css("background", "#fff", "color", "#000");
 		bolAnswerSelected = false;
-		if (intQuestionCounter === 20) {
+		if (intQuestionCounter > 20) {
 			gameOver();
 		}
 	}, 4000)
@@ -109,7 +103,7 @@ function timeUp() {
 		questionLoader();
 		$(".answers").css("background", "#fff", "color", "#000");
 		bolAnswerSelected = false;
-		if (intQuestionCounter === 20) {
+		if (intQuestionCounter > 20) {
 			gameOver();
 		}
 	}, 4000)
@@ -135,8 +129,6 @@ function gameOver() {
 		$("#containerIntro").css("display", "none");
 		$("#containerQuestions").css("display", "block");
 		objTriviaQuestions = objQuestions;
-		console.log(objTriviaQuestions);
-		console.log(_.size(objTriviaQuestions));
 		questionLoader();
 	});
 
@@ -147,7 +139,6 @@ function gameOver() {
 	$(".answers").click(function() {
 	if (!bolAnswerSelected) {
 		checker($(this).attr("data-position"));
-		console.log($(this).attr("data-position"));
 		bolAnswerSelected = true;
 	}
 	})
